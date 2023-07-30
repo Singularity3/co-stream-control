@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../js/xjs.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../js/gsap/TweenMax.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../js/break.js" type="text/javascript" charset="utf-8"></script>
+        <style text="test/css">
+            @font-face { src:url("../fonts/BebasNeue-Regular.ttf"); font-family: "Bebas"; }
+            @-webkit-keyframes BackgroundTransition {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+            }
+            @-moz-keyframes BackgroundTransition {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+            }
+            @-o-keyframes BackgroundTransition {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+            }
+            @keyframes BackgroundTransition {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+            }
+            #background {
+                width:1920px;
+                height:1080px;
+                background: linear-gradient(to left, #381e93, #7353e6, #381e93, #7353e6, #381e93, #7353e6, #381e93, #7353e6, #381e93, #7353e6);
+                background-size: 1000% 1000%;
+                -webkit-animation: BackgroundTransition 500s linear infinite;
+                -moz-animation: BackgroundTransition 500s linear infinite;
+                -o-animation: BackgroundTransition 500s linear infinite;
+                animation: BackgroundTransition 500s linear infinite;
+                z-index: -1;
+                opacity: 0.95;
+                /* padding-top:200px; */
+            }
+            #feed1 {
+                width:720px;
+                height:405px;
+                float:left;
+                background-color:black;
+                border: 7px solid pink;
+                top:75px;
+                left:150px;
+                position:absolute;
+            }
+            #feed2 {
+                width:720px;
+                height:405px;
+                float:left;
+                background-color:black;
+                margin-left: 40px;
+                border: 7px solid pink;
+                top:75px;
+                right: 150px;
+                position: absolute;
+            }
+            #feed3 {
+                width:720px;
+                height:405px;
+                background-color:black;
+                margin-left: -50%;
+                border: 7px solid pink;
+                top:550px;
+                right:50%;
+                position: absolute;
+                transform: translate(50%, 0%);
+            }
+            #infoBar {
+                width: 1920px;
+                height: 60px;
+                position: fixed;
+                background-color: black;
+                bottom: 0;
+                text-align: center;
+                font-size: 40px;
+                font-family: Bebas;
+                border-top: 3px solid pink;
+                padding-top: 10px;
+                color: lightgray;
+                opacity:1;
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+            #venue {
+                order: 1;
+                flex: 0 1 auto;
+                text-align: center;
+                width: 600px;
+            }
+
+            #event {
+                order: 2;
+                flex: 0 0 auto;
+                text-align: center;
+                color: white;
+                width: 600px;
+            }
+
+            #date {
+                order: 3;
+                flex: 0 1 auto;
+                float: right;
+                text-align: center;
+                width: 600px;
+            }
+            #logo1 {
+                height:285px;
+                width:auto;
+                top:625px;
+                position:absolute;
+                left:65px;
+            }
+            #logo2 {
+                height:380px;
+                width:auto;
+                top:575px;
+                position:absolute;
+                right:115px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="background">
+            <img id="logo1" src="../imgs/AkiLogo.png">
+            <span id="feed1">hello</span>
+            <span id="feed2">sup man</span>
+            <span id="feed3">hiyeeeeee</span>
+            <img id="logo2" src="../imgs/buttons_on_wakeup.png">
+        </div>
+        <div id="infoBar">
+            <span id="venue"></span>
+            <span id="event"></span>
+            <span id="date"></span>
+        </div>
+    </body>
+</html>

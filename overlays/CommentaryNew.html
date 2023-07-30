@@ -1,0 +1,440 @@
+<html>
+    <head>
+        <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../js/xjs.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../js/gsap/TweenMax.js" type="text/javascript" charset="utf-8"></script>
+        <style text="text/CSS">
+            body {
+                font-family: "Bebas";
+                color: lightblue;
+            }
+            @font-face { src:url("../fonts/BebasNeue-Regular.ttf"); font-family: "Bebas"; }
+            @-webkit-keyframes BackgroundTransition {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+            }
+            @-moz-keyframes BackgroundTransition {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+            }
+            @-o-keyframes BackgroundTransition {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+            }
+            @keyframes BackgroundTransition {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+            }
+            #commentaryContainer {
+                width: 1920px;
+                height:1080px;
+            }
+            #backgroundLeft {
+                width:620px;
+                height:66px;
+                border-radius: 10px;
+                z-index: 0;
+                position:absolute;
+                background: linear-gradient(to left, #813585, #381e93, #7353e6, #9e0039, #a05411, #9e0039, #7353e6, #381e93, #813585);
+                background-size: 400% 400%;
+                -webkit-animation: BackgroundTransition 30s linear infinite;
+                -moz-animation: BackgroundTransition 30s linear infinite;
+                -o-animation: BackgroundTransition 30s linear infinite;
+                animation: BackgroundTransition 30s linear infinite;
+                display:inline-block;
+                left:150px;
+                bottom:100px;
+            }
+            #backgroundRight {
+                width:620px;
+                height:66px;
+                border-radius: 10px;
+                z-index: 0;
+                position:absolute;
+                display: inline-block;
+                background: linear-gradient(to right, #813585, #381e93, #7353e6, #9e0039, #a05411, #9e0039, #7353e6, #381e93, #813585);
+                background-size: 400% 400%;
+                -webkit-animation: BackgroundTransition 30s linear infinite;
+                -moz-animation: BackgroundTransition 30s linear infinite;
+                -o-animation: BackgroundTransition 30s linear infinite;
+                animation: BackgroundTransition 30s linear infinite;
+                right:150px;
+                bottom:100px;
+            }
+            #commentaryContainerLeft {
+                width:594px;
+                height:45px;
+                margin:8px;
+                float:left;
+                padding-left:10px;
+                padding-top:5px;
+                z-index: 1;
+                background-color: black;
+                border-radius: 10px;
+                font-size: 25px;
+                text-align: center;
+            }
+            #commentaryContainerRight {
+                width:594px;
+                height:45px;
+                margin:8px;
+                float:right;
+                padding-right:10px;
+                padding-top:5px;
+                z-index: 1;
+                background-color: black;
+                border-radius: 10px;
+                font-size: 25px;  
+                text-align: center;   
+            }
+            #comm1Team {
+                padding-right: 5px;
+                display: inline-block;
+                font-size: 35px;
+                color: lightgray;
+            }
+            #comm1Name {
+                display: inline-block;
+                font-size: 35px;
+            }
+            #comm1Pronouns {
+                display: inline-block;
+                font-size: 22px;
+                padding-left: 5px;
+            }
+            #comm2Team {
+                padding-right: 5px;
+                display: inline-block;
+                font-size: 35px;
+                color: lightgray;
+            }
+            #comm2Name {
+                display: inline-block;
+                font-size: 35px;
+            }
+            #comm2Pronouns {
+                display: inline-block;
+                font-size: 22px;
+                padding-left: 5px;
+            }
+            #tagSeparator {
+                padding-right: 1px;
+                padding-left: 0px;
+                display: inline-block;
+                font-size: 35px;
+            }
+            #backgroundCenter {
+                width:130px;
+                height:45px;
+                z-index: 0;
+                top:20px;
+                left:892px;
+                /* right:0px; */
+                /* padding-top:10px; */
+                border-radius: 5px;
+                position:absolute;
+                display: inline-block;
+                background:  linear-gradient(to top, #381e93, #7353e6);
+                -webkit-animation: BackgroundTransition 30s linear infinite;
+                -moz-animation: BackgroundTransition 30s linear infinite;
+                -o-animation: BackgroundTransition 30s linear infinite;
+                animation: BackgroundTransition 30s linear infinite;
+            }
+            #roundContainer {
+                height:35px;
+                width:120px;
+                margin-left: 5px;
+                background-color: black;
+                border-radius: 3px;
+            }
+            #round {
+                font-size: 30px;
+                text-align: center;
+                margin-top: 5px;
+                padding-top: 1px;
+            }
+            #logos {
+                position:absolute;
+                left:30px;
+                height:150px;
+                width:auto;
+                margin-left:800px;
+                bottom:70px;
+            }
+            #logoImage1 {
+                width: auto;
+                height: 150px;
+                z-index: -1;
+                position: absolute;
+                left:-5px;
+                top: 0px;
+            }
+
+            #logoImage2 {
+                width: auto;
+                height: 200px;
+                z-index: -1;
+                position: absolute;
+                left: 28px;
+                top: -25px;
+            }
+            #logoImage3 {
+                width: auto;
+                height: 180px;
+                z-index: -1;
+                position: absolute;
+                left: 20px;
+                top: -15px;
+            }
+            #logoImage4 {
+                width: auto;
+                height: 160px;
+                z-index: -1;
+                position: absolute;
+                left: 5px;
+                top: -15px;
+            }
+            div + span {
+                padding-left: 20px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="commentaryContainer">
+            <div id="backgroundLeft">
+                <div id="commentaryContainerLeft">
+                    <div id="comm1Name"></div>
+                    <div id="comm1Team"></div>
+                    <div id="comm1Pronouns"></div>
+                </div>
+            </div>
+            <div id="logos">
+                <img id="logoImage1" src="../imgs/AkiLogo.png" alt="akiLogo" />
+                <img id="logoImage2" src="../imgs/buttons_on_wakeup.png" alt="ws8Logo" />
+                <img id="logoImage3" src="../imgs/MHB_logo_transparent.png" alt="MHBLogo" />
+                <img id="logoImage4" src="../imgs/jf_logo_orange.png" alt="JFLogo" />
+            </div>
+            <div id="backgroundRight">
+                <div id="commentaryContainerRight">
+                    <div id="comm2Name"></div>
+                    <div id="comm2Team"></div>
+                    <div id="comm2Pronouns"></div>
+                </div>
+            </div>
+        </div>
+        <script text="text/javascript">
+
+            window.onload = init();
+
+            function init() {
+                $(function () {
+                    $('#logos img:gt(0)').hide();
+                    setInterval(function () {
+                        $('#logos :first-child').fadeOut()
+                            .next('img').fadeIn()
+                            .end().appendTo('#logos');
+                    },
+                        5000);
+                });
+                //$('#allWrapper').css('display','block');
+
+                var streamJSON = "../sc/streamcontrol.json";
+                var xhttp = new XMLHttpRequest();
+                var firstUpdate = true;
+                var scObj;
+                var animated = 0;
+                var cacheBuster = 0;
+                var hidden = true;
+
+                function Build() {
+                    if (navigator.userAgent.indexOf("XSplit") != -1) {
+                        var xjs = require('xjs');
+                        var App = new xjs.App();
+                        var XJSitem;
+                        var XJSframe = null;
+
+                        xjs.ready().then(xjs.Source.getCurrentSource).then(function (source) {
+                            source.getItemList().then(function (items) {
+                                isXsplit = true;
+
+                                XJSitem = items[0];
+
+                                XJSitem.setBrowserCustomSize(xjs.Rectangle.fromDimensions(1920, 1080));
+                                XJSitem.setPosition(xjs.Rectangle.fromCoordinates(0, 0, 1, 1));
+                                XJSitem.setPositionLocked(true);
+                                XJSitem.setPositionLocked(true);
+                                //XJSitem.setFullDynamicColorRange(true);
+                                window.external.SetLocalProperty("prop:Browser60fps", "1");
+                            })
+                        });
+                    }
+                    else {
+                    }
+                }
+                Build();
+
+                xhttp.overrideMimeType('application/json');
+
+                xhttp.onreadystatechange = parseJSON;
+
+                pollHandler();
+                setInterval(function () { pollHandler(); }, 700);
+
+                function pollHandler() {
+                    xhttp.open('GET', streamJSON + "?v=" + cacheBuster, true);
+                    xhttp.send();
+                    cacheBuster++;
+                }
+
+                function parseJSON() {
+                    if (xhttp.readyState === 4) {
+                        scObj = JSON.parse(xhttp.responseText);
+                        getText();
+                    }
+                }
+
+                function getText() {
+                    var comm1Name = scObj["com1"];
+                    var comm2Name = scObj["com2"];
+                    var comm1Team = scObj["team1"];
+                    var comm2Team = scObj["team2"];
+                    var comm1Pron = scObj["pron1"];
+                    var comm2Pron = scObj["pron2"];
+
+                    if (firstUpdate == true) {
+                        $("#comm1Name").html(comm1Name);
+                        $("#comm2Name").html(comm2Name);
+                        $("#comm1Team").html(comm1Team);
+                        $("#comm2Team").html(comm2Team);
+                        $("#comm1Pronouns").html(comm1Pron);
+                        $("#comm2Pronouns").html(comm2Pron);
+                        // setTimeout(() => {
+                        //     wrapper1.each(function(i, wrapper1) {
+                        //         while(wrapper1.scrollWidth > wrapper1.offsetWidth || wrapper1.scrollHeight > wrapper1.offsetHeight) {
+                        //             var newFontSize = (parseFloat($(wrapper1).css('font-size').slice(0, -2)) * 0.95) + 'px';
+                        //             $(wrapper1).css('font-size', newFontSize);
+                        //         }
+                        //     });
+                        //     wrapper2.each(function(i, wrapper2) {
+                        //         while(wrapper2.scrollWidth > wrapper2.offsetWidth || wrapper2.scrollHeight > wrapper2.offsetHeight) {
+                        //             var newFontSize = (parseFloat($(wrapper2).css('font-size').slice(0, -2)) * 0.95) + 'px';
+                        //             $(wrapper2).css('font-size', newFontSize);
+                        //         }
+                        //     });
+                        // }, 20);
+                        showComms();
+                        firstUpdate = false;
+                    }
+                    else {
+                        if (hidden == false) {
+                            if ($('#comm1Name').text() != comm1Name) {
+                                TweenMax.to("#comm1Name", .3, {
+                                    css: { x: "+60px", opacity: 0 }, ease: Quad.easeOut, delay: 0, onComplete: function () {
+                                        $("#comm1Name").css('font-size', '35px');
+                                        $('#comm1Name').html(comm1Name);
+                                        TweenMax.to("#comm1Name", .3, { css: { x: "+0px", opacity: 1 }, ease: Quad.easeOut, delay: .2 });
+                                    }
+                                });
+                            }
+
+                            if ($('#comm2Name').text() != comm2Name) {
+                                TweenMax.to("#comm2Name", .3, {
+                                    css: { x: "-60px", opacity: 0 }, ease: Quad.easeOut, delay: 0, onComplete: function () {
+                                        $('#comm2Name').css("font-size", "35px");
+                                        $('#comm2Name').html(comm2Name);
+                                        TweenMax.to("#comm2Name", .3, { css: { x: "+0px", opacity: 1 }, ease: Quad.easeOut, delay: .2 });
+                                    }
+                                });
+                            }
+
+                            if ($('#comm1Team').text() != comm1Team) {
+                                TweenMax.to("#comm1Team", .3, {
+                                    css: { x: "+60px", opacity: 0 }, ease: Quad.easeOut, delay: 0, onComplete: function () {
+                                        $("#comm1Team").css('font-size', '35px');
+                                        $('#comm1Team').html(comm1Team);
+                                        TweenMax.to("#comm1Team", .3, { css: { x: "+0px", opacity: 1 }, ease: Quad.easeOut, delay: .2 });
+                                    }
+                                });
+                            }
+
+                            if ($('#comm2Team').text() != comm2Team) {
+                                TweenMax.to("#comm2Team", .3, {
+                                    css: { x: "-60px", opacity: 0 }, ease: Quad.easeOut, delay: 0, onComplete: function () {
+                                        $('#comm2Team').css("font-size", "35px");
+                                        $('#comm2Team').html(comm2Team);
+                                        TweenMax.to("#comm2Team", .3, { css: { x: "+0px", opacity: 1 }, ease: Quad.easeOut, delay: .2 });
+                                    }
+                                });
+                            }
+
+                            if ($('#comm1Pronouns').text() != comm1Pron) {
+                                TweenMax.to("#comm1Pronouns", .3, {
+                                    css: { x: "+60px", opacity: 0 }, ease: Quad.easeOut, delay: 0, onComplete: function () {
+                                        $("#comm1Pronouns").css('font-size', '22px');
+                                        $('#comm1Pronouns').html(comm1Pron);
+                                        TweenMax.to("#comm1Pronouns", .3, { css: { x: "+0px", opacity: 1 }, ease: Quad.easeOut, delay: .2 });
+                                    }
+                                });
+                            }
+
+                            if ($('#comm2Pronouns').text() != comm2Pron) {
+                                TweenMax.to("#comm2Pronouns", .3, {
+                                    css: { x: "-60px", opacity: 0 }, ease: Quad.easeOut, delay: 0, onComplete: function () {
+                                        $('#comm2Pronouns').css("font-size", "22px");
+                                        $('#comm2Pronouns').html(comm2Pron);
+                                        TweenMax.to("#comm2Pronouns", .3, { css: { x: "+0px", opacity: 1 }, ease: Quad.easeOut, delay: .2 });
+                                    }
+                                });
+                            }
+                        }
+                        else {
+                            if ($('#comm1Name').text() != comm1Name) {
+                                $("#comm1Name").html(comm1Name);
+                            }
+
+                            if ($('#comm2Name').text() != comm2Name) {
+                                $("#comm2Name").html(comm2Name);
+                            }
+
+                            if ($('#comm1Team').text() != comm1Team) {
+                                $("#comm1Team").html(comm1Team);
+                            }
+
+                            if ($('#comm2Team').text() != comm2Team) {
+                                $("#comm2Team").html(comm2Team);
+                            }
+
+                            if ($('#comm1Pronouns').text() != comm1Twit) {
+                                $("#comm1Pronouns").html(comm1Twit);
+                            }
+
+                            if ($('#comm2Pronouns').text() != comm2Twit) {
+                                $("#comm2Pronouns").html(comm2Twit);
+                            }
+                        }
+                    }
+                }
+
+                function showComms() {
+                    if (hidden == true) {
+                        TweenMax.to("#comm1Name", .8, { css: { opacity: 1 }, ease: Quad.easeOut, delay: 1.2 });
+                        TweenMax.to("#comm2Name", .8, { css: { opacity: 1 }, ease: Quad.easeOut, delay: 1.2 });
+                        TweenMax.to("#comm1Team", .8, { css: { opacity: 1 }, ease: Quad.easeOut, delay: 1.2 });
+                        TweenMax.to("#comm2Team", .8, { css: { opacity: 1 }, ease: Quad.easeOut, delay: 1.2 });
+                        TweenMax.to("#comm1Pronouns", .8, { css: { opacity: 1 }, ease: Quad.easeOut, delay: 1.2 });
+                        TweenMax.to("#comm2Pronouns", .8, { css: { opacity: 1 }, ease: Quad.easeOut, delay: 1.2 });
+                        hidden = false;
+
+                    }
+                }
+            }
+
+            
+        </script>
+    </body>
+</html>

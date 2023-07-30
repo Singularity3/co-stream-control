@@ -1,0 +1,135 @@
+<!DOCTYPE StreamControlLayout>
+<layout width="550" height="340" tabbed="1">
+  <toolBar>
+  </toolBar>
+ <tab name="Players">
+  <label x="20" y="34" width="46" height="13">Player 1</label>
+  <label x="20" y="64" width="46" height="13">Player 2</label>
+  <label x="28" y="94" width="60" height="13">Round</label>
+  <label x="31" y="124" width="60" height="13">Game</label>
+  <label x="80" y="10" width="46" height="13">Name</label>
+  <label x="225" y="10" width="46" height="13">Sponsor</label>
+  <label x="282" y="10" width="46" height="13">Pronouns</label>
+  <label x="349" y="10" width="46" height="13">Score</label>
+  <lineEdit id="pName1" x="80" y="30" width="141" height="20" dataSet="players.csv" dataField="1"/> 
+  <lineEdit id="pTeam1" x="225" y="30" width="52" height="20" dataSet="players.csv" dataField="2" master="pName1"/>
+  <lineEdit id="pPronouns1" x="282" y="30" width="60" height="20" dataSet="players.csv" dataField="3" master="pName1"/>
+  <spinBox id="pScore1" x="349" y="29" width="52" height="30" maximum="999" />
+  <lineEdit id="pName2" x="80" y="60" width="141" height="20" dataSet="players.csv" dataField="1"/>
+  <lineEdit id="pTeam2" x="225" y="60" width="52" height="20" dataSet="players.csv" dataField="2" master="pName2"/>
+  <lineEdit id="pPronouns2" x="282" y="60" width="60" height="20" dataSet="players.csv" dataField="3" master="pName2"/>
+  <spinBox id="pScore2" x="349" y="59" width="52" height="30" maximum="999" />
+  <lineEdit id="round" x="80" y="90" width="141" height="20" dataSet="round.csv"/>
+	<comboBox id="game" x="80" y="120" width="141" height="20">
+    <comboItem>UNICLR</comboItem>
+    <comboItem>DBFZ</comboItem>
+    <comboItem>BBCF</comboItem>
+    <comboItem>GBFV</comboItem>
+    <comboItem>MBTL</comboItem>
+    <comboItem>ST</comboItem>
+    <comboItem>3S</comboItem>
+    <comboItem>SF6</comboItem>
+    <comboItem>GGPR</comboItem>
+    <comboItem>XRD</comboItem>
+    <comboItem>STRIVE</comboItem>
+    <comboItem>SSBU</comboItem>
+    <comboItem>T7</comboItem>
+    <comboItem>VF5</comboItem>
+    <comboItem>SC6</comboItem>
+    <comboItem>KOFXV</comboItem>
+    <comboItem>SAMSHO</comboItem>
+    <comboItem>DNF</comboItem>
+    <comboItem>SKLGRL</comboItem>
+    <comboItem>UMVC3</comboItem>
+  </comboBox>
+ 
+  <button type="reset" x="225" y="90" width="52" height="23" tooltip="Reset the Scores" id="reset" reset="pScore1,pScore2">Reset</button>
+  <button type="swap" x="282" y="90" width="57" height="23" tooltip="Swap the Scores" id="swap1" swapSet1="pName1,pScore1,pTeam1,pCountry1,pPronouns1" swapSet2="pName2,pScore2,pTeam2,pCountry2,pPronouns2">Swap</button>
+  <button type="reset" x="349" y="90" width="52" height="23" tooltip="Reset the Scores" id="reset4" reset="pName1,pName2,pScore1,pScore2,pTeam1,pTeam2,pCountry1,pCountry2,pPronouns1,pPronouns2">Clear</button>	
+ </tab>
+ <tab name="Comms">
+  <label x="10" y="14" width="46" height="13">Com1</label>
+  <label x="10" y="44" width="46" height="13">Twitter</label>
+  <label x="10" y="74" width="46" height="13">Prons</label>
+  <lineEdit id="com1" x="50" y="10" width="170" height="20" dataSet="commentary.csv" dataField="1"/>
+  <lineEdit id="team1" x="50" y="40" width="170" height="20" dataSet="commentary.csv" dataField="2" master="com1"/>
+  <lineEdit id="pron1" x="50" y="70" width="80" height="20" dataSet="commentary.csv" dataField="3" master="com1"/>     
+
+  <label x="230" y="14" width="46" height="13">Com2</label>
+  <label x="230" y="44" width="46" height="13">Twitter</label>
+  <label x="230" y="74" width="46" height="13">Prons</label>
+  <lineEdit id="com2" x="270" y="10" width="170" height="20" dataSet="commentary.csv" dataField="1"/>
+  <lineEdit id="team2" x="270" y="40" width="170" height="20" dataSet="commentary.csv" dataField="2" master="com2"/>
+  <lineEdit id="pron2" x="270" y="70" width="80" height="20" dataSet="commentary.csv" dataField="3" master="com2"/>  
+     <button type="reset" x="200" y="110" width="52" height="23" tooltip="Reset Comms" id="reset5" reset="com1,team1,pron1,com2,team2,pron2">Clear</button>	
+ </tab>
+ <tab name="Bracket"> 
+	<tabSet x="10" y="10" width="460" height="220">
+	<tab name="Clear/Config">
+		<button type="reset" x="10" y="40" width="120" height="23" id="reset2" reset="T8_Win_1A,T8_Win_1B,T8_Win_2A,T8_Win_2B,T8_WF_1A,T8_WF_1B,T8_GF_1A,T8_GF_1B,T8_Win_1AS,T8_Win_1BS,T8_Win_2AS,T8_Win_2BS,T8_WF_1AS,T8_WF_1BS,T8_GF_1AS,T8_GF_1BS">Clear Winners Bracket</button>
+		<button type="reset" x="140" y="40" width="120" height="23" id="reset3" reset="T8_Los_1A,T8_Los_1B,T8_Los_2A,T8_Los_2B,T8_LQ_1A,T8_LQ_1B,T8_LQ_2A,T8_LQ_2B,T8_LS_1A,T8_LS_1B,T8_LF_1A,T8_LF_1B,T8_Los_1AS,T8_Los_1BS,T8_Los_2AS,T8_Los_2BS,T8_LQ_1AS,T8_LQ_1BS,T8_LQ_2AS,T8_LQ_2BS,T8_LS_1AS,T8_LS_1BS,T8_LF_1AS,T8_LF_1BS">Clear Losers Bracket</button>
+        <button type="reset" x="270" y="40" width="120" height="23" id="reset6" reset="T8_Win_1A,T8_Win_1B,T8_Win_2A,T8_Win_2B,T8_WF_1A,T8_WF_1B,T8_GF_1A,T8_GF_1B,T8_Win_1AS,T8_Win_1BS,T8_Win_2AS,T8_Win_2BS,T8_WF_1AS,T8_WF_1BS,T8_GF_1AS,T8_GF_1BS,T8_Los_1A,T8_Los_1B,T8_Los_2A,T8_Los_2B,T8_LQ_1A,T8_LQ_1B,T8_LQ_2A,T8_LQ_2B,T8_LS_1A,T8_LS_1B,T8_LF_1A,T8_LF_1B,T8_Los_1AS,T8_Los_1BS,T8_Los_2AS,T8_Los_2BS,T8_LQ_1AS,T8_LQ_1BS,T8_LQ_2AS,T8_LQ_2BS,T8_LS_1AS,T8_LS_1BS,T8_LF_1AS,T8_LF_1BS">Clear All</button>
+	</tab>
+	<tab name="Top 8 Winners" scrollable="1">
+		<label x="50" y="14" width="70" height="13">Winners Semis</label>
+		<label x="210" y="14" width="70" height="13">Winners Finals</label>
+		<label x="390" y="14" width="70" height="13">Grand Finals</label>
+		<lineEdit id="T8_Win_1A" x="10" y="40" width="120" height="20" dataSet="players.csv" dataField="1" />
+		<lineEdit id="T8_Win_1AS" x="132" y="40" width="20" height="20" />
+		<lineEdit id="T8_Win_1B" x="10" y="65" width="120" height="20" dataSet="players.csv" dataField="1" />
+		<lineEdit id="T8_Win_1BS" x="132" y="65" width="20" height="20" />
+		<lineEdit id="T8_Win_2A" x="10" y="96" width="120" height="20" dataSet="players.csv" dataField="1" />
+		<lineEdit id="T8_Win_2AS" x="132" y="96" width="20" height="20"/>
+		<lineEdit id="T8_Win_2B" x="10" y="121" width="120" height="20" dataSet="players.csv" dataField="1" />
+		<lineEdit id="T8_Win_2BS" x="132" y="121" width="20" height="20"/>
+		<lineEdit id="T8_WF_1A" x="180" y="68" width="120" height="20" dataSet="players.csv" dataField="1" />
+		<lineEdit id="T8_WF_1AS" x="302" y="68" width="20" height="20"/>
+		<lineEdit id="T8_WF_1B" x="180" y="93" width="120" height="20" dataSet="players.csv" dataField="1" />
+		<lineEdit id="T8_WF_1BS" x="302" y="93" width="20" height="20"/>
+		<lineEdit id="T8_GF_1A" x="350" y="68" width="120" height="20" dataSet="players.csv" dataField="1" />
+		<lineEdit id="T8_GF_1AS" x="472" y="68" width="20" height="20" />
+		<lineEdit id="T8_GF_1B" x="350" y="93" width="120" height="20" dataSet="players.csv" dataField="1" />
+		<lineEdit id="T8_GF_1BS" x="472" y="93" width="20" height="20" />
+	</tab>
+	<tab name="Top 8 Losers" scrollable="1">
+	<label x="50" y="14" width="70" height="13">T8 Round 1</label>
+		<label x="210" y="14" width="80" height="13">Losers Quarters</label>
+		<label x="390" y="14" width="70" height="13">Losers Semis</label>
+		<label x="560" y="14" width="80" height="13">Losers Finals</label>
+		<lineEdit id="T8_Los_1A" x="10" y="40" width="120" height="20" dataSet="players.csv" dataField="1" />
+		<lineEdit id="T8_Los_1AS" x="132" y="40" width="20" height="20" />
+		<lineEdit id="T8_Los_1B" x="10" y="65" width="120" height="20" dataSet="players.csv" dataField="1" />
+		<lineEdit id="T8_Los_1BS" x="132" y="65" width="20" height="20" />/>
+		<lineEdit id="T8_Los_2A" x="10" y="96" width="120" height="20" dataSet="players.csv" dataField="1" />
+		<lineEdit id="T8_Los_2AS" x="132" y="96" width="20" height="20" />
+		<lineEdit id="T8_Los_2B" x="10" y="121" width="120" height="20" dataSet="players.csv" dataField="1" />
+		<lineEdit id="T8_Los_2BS" x="132" y="121" width="20" height="20" />
+		<lineEdit id="T8_LQ_1A" x="180" y="40" width="120" height="20" dataSet="players.csv" dataField="1">From Winners</lineEdit>
+		<lineEdit id="T8_LQ_1AS" x="302" y="40" width="20" height="20"  />
+		<lineEdit id="T8_LQ_1B" x="180" y="65" width="120" height="20" dataSet="players.csv" dataField="1" />
+		<lineEdit id="T8_LQ_1BS" x="302" y="65" width="20" height="20" />
+		<lineEdit id="T8_LQ_2A" x="180" y="96" width="120" height="20" dataSet="players.csv" dataField="1">From Winners</lineEdit>
+		<lineEdit id="T8_LQ_2AS" x="302" y="96" width="20" height="20"/>
+		<lineEdit id="T8_LQ_2B" x="180" y="121" width="120" height="20" dataSet="players.csv" dataField="1" />
+		<lineEdit id="T8_LQ_2BS" x="302" y="121" width="20" height="20"/>
+		<lineEdit id="T8_LS_1A" x="350" y="68" width="120" height="20" dataSet="players.csv" dataField="1" />
+		<lineEdit id="T8_LS_1AS" x="472" y="68" width="20" height="20" />
+		<lineEdit id="T8_LS_1B" x="350" y="93" width="120" height="20" dataSet="players.csv" dataField="1" />
+		<lineEdit id="T8_LS_1BS" x="472" y="93" width="20" height="20"/>
+		<lineEdit id="T8_LF_1A" x="520" y="68" width="120" height="20" dataSet="players.csv" dataField="1">From Winners</lineEdit>
+		<lineEdit id="T8_LF_1AS" x="642" y="68" width="20" height="20"/>
+		<lineEdit id="T8_LF_1B" x="520" y="93" width="120" height="20" dataSet="players.csv" dataField="1" />
+		<lineEdit id="T8_LF_1BS" x="642" y="93" width="20" height="20"/>
+	</tab>
+	</tabSet>
+  <button type="timestamp" id="safe3" x="411" y="250" width="60" height="23" saveonclick="1">Save</button>
+ </tab>
+ <tab name='Standby'>
+  <label x="20" y="34" width="66" height="13">Venue</label>
+  <label x="20" y="64" width="66" height="13">Event</label>
+  <label x="20" y="94" width="66" height="13">Date</label>
+     <lineEdit id="venue" x="80" y="30" width="300" height="20"/> 
+     <lineEdit id="event" x="80" y="60" width="300" height="20"/>
+     <lineEdit id="date" x="80" y="90" width="300" height="20"/>
+ </tab>
+</layout>

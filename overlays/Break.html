@@ -1,0 +1,234 @@
+<html>
+    <head>
+        <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../js/xjs.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../js/gsap/TweenMax.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../js/break.js" type="text/javascript" charset="utf-8"></script>
+        <style text="text/CSS">
+            @font-face { src:url("../fonts/BebasNeue-Regular.ttf"); font-family: "Bebas"; }
+            @-webkit-keyframes BackgroundTransition {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+            }
+            @-moz-keyframes BackgroundTransition {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+            }
+            @-o-keyframes BackgroundTransition {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+            }
+            @keyframes BackgroundTransition {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+            }
+            /*@keyframes cf4FadeInOut {
+                0% {
+                    opacity: 1;
+                }
+
+                17% {
+                    opacity: 0.25;
+                }
+
+                25% {
+                    opacity: 0.3125;
+                }
+
+                92% {
+                    opacity: 0.875;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+            #logoContainer img:nth-of-type(1) {
+                animation-delay: 9s;
+            }
+            #logoContainer img:nth-of-type(2) {
+                animation-delay: 6s;
+            }
+            #logoContainer img:nth-of-type(3) {
+                animation-delay: 3s;
+            }
+            #logoContainer img:nth-of-type(4) {
+                animation-delay: 0;
+            }
+            #logoContainer img {
+                position: absolute;
+                -webkit-transition: opacity 1s ease-in-out;
+                -moz-transition: opacity 1s ease-in-out;
+                -o-transition: opacity 1s ease-in-out;
+                transition: opacity 1s ease-in-out;
+                animation-name: cf4FadeInOut;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-duration: 10s;
+            }
+            #logoContainer img.transparent {
+                opacity: 0;
+            }*/
+            #background {
+                width: 1920px;
+                height: 1080px;
+                background: linear-gradient(to left, rgba(129, 53, 133, 0.95), rgba(56, 30, 147, 0.95), rgba(115, 83, 230, 0.95), rgba(158, 0, 57, 0.95), rgba(160, 84, 17, 0.95), rgba(158, 0, 57, 0.95), rgba(115, 83, 230, 0.95), rgba(56, 30, 147, 0.95), rgba(129, 53, 133, 0.95));
+                background-size: 400% 400%;
+                -webkit-animation: BackgroundTransition 40s linear infinite;
+                -moz-animation: BackgroundTransition 40s linear infinite;
+                -o-animation: BackgroundTransition 40s linear infinite;
+                animation: BackgroundTransition 40s linear infinite;
+                z-index: -1;
+                position: absolute;
+            }
+
+            #breakImage {
+                width: 750px;
+                height: auto;
+                margin-left: 1000px;
+                margin-top:50px;
+            }
+            #logoContainer {
+                width:500px;
+                height:auto;
+                top: 170px;
+                left:400px;
+                z-index: -1;
+                position: absolute;
+            }
+            #logoImage1 {
+                width: 600px;
+                height: auto;
+                z-index: -1;
+                position: absolute;
+                left:-60px;
+                top:-40px;
+            }
+            #logoImage2 {
+                width: 420px;
+                height: auto;
+                z-index: -1;
+                position: absolute;
+                left: 40px;
+                top: -60px;
+            }
+            #logoImage3 {
+                width: 500px;
+                height: auto;
+                z-index: -1;
+                position: absolute;
+                left: 0px;
+                top: -80px;
+            }
+            #logoImage4 {
+                width: 500px;
+                height: auto;
+                z-index: -1;
+                position: absolute;
+                left: 0px;
+                top: -50px;
+            }
+            #messageContainer {
+                width:700px;
+                height:auto;
+                margin-left:300px;
+                bottom:100px;
+                opacity: 1;
+                z-index: 1;
+                text-align: center;
+                position: absolute;
+            }
+            #message {
+                color:white;
+                font-family:"Bebas";
+                font-size: 100px;
+                padding-bottom: 20px;
+                margin-top: 10px;
+                z-index: 1;
+            }
+            .info {
+                color:white;
+                font-family:"Bebas";
+                font-size: 50px;
+                word-wrap:break-word;
+            }
+            #infoBar {
+                width: 1920px;
+                height: 60px;
+                position: fixed;
+                background-color: black;
+                bottom: 0;
+                text-align: center;
+                font-size: 40px;
+                font-family: Bebas;
+                border-top: 3px solid pink;
+                padding-top: 10px;
+                color: lightgray;
+                opacity:1;
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+            #venue {
+                order: 1;
+                flex: 0 1 auto;
+                text-align: center;
+                width: 600px;
+            }
+
+            #event {
+                order: 2;
+                flex: 0 0 auto;
+                text-align: center;
+                color: white;
+                width: 600px;
+            }
+
+            #date {
+                order: 3;
+                flex: 0 1 auto;
+                float: right;
+                text-align: center;
+                width: 600px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="background">
+            <img id="breakImage" src="../imgs/AkiGal.png" alt="AkiGal">
+            <div id="logoContainer">
+                <img id="logoImage1" src="../imgs/AkiLogo.png" alt="akiLogo" />
+                <img id="logoImage2" src="../imgs/buttons_on_wakeup.png" alt="buttonsLogo" />
+                <img id="logoImage3" src="../imgs/MHB_logo_transparent.png" alt="MHBLogo" />
+                <img id="logoImage4" src="../imgs/jf_logo_orange.png" alt="JFLogo" />
+            </div>
+            <div id="messageContainer">
+                <div class="info">Follow us on Twitter: </div>
+                <div class="info">@AkihabaraArcade</div>
+                <div class="info">Check out our website: </div>
+                <div class="info">www.akihabaraarcade.com</div>
+                <div id="message">We'll be right back!</div>
+            </div>
+            <div id="infoBar">
+                <span id="venue"></span>
+                <span id="event"></span>
+                <span id="date"></span>
+            </div>
+        </div>
+        <script>
+            $(function () {
+                $('#logoContainer img:gt(0)').hide();
+                setInterval(function () {
+                    $('#logoContainer :first-child').fadeOut()
+                        .next('img').fadeIn()
+                        .end().appendTo('#logoContainer');
+                },
+                    5000);
+            });
+        </script>
+    </body>
+</html>
