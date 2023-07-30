@@ -224,32 +224,32 @@ var games = {
 	},
 
 	"SSBU": {
-		"p1y": '8px',
-		"p2y": '8px',
-		"pf": '37px',
-		"pp": '3px',
-        "pw": '535px',      // player name textbox width
-		"p1x": '336px',
-		"p2x": '1226px',
-		"lbx": '150px',
-		"rbx": '150px',
-        "bgw": '620px',     // background width
-		"p1i": '+60px',
-		"p2i": '-60px',
-		"p1a": 'center',
-		"p2a": 'center',
-		"psw": '48px',
-		"psh": '45px',
-		"psy": '6px',
-		"psf": '37px',
-		"rw": '200px',
-		"rh": '45px',
-		"ry": '980px',
-		"rx": '849px',
-		"gn": 'Super Smash Bros Ultimate',
-		"sbh": '47px',
-		"bgh": '66px',
-		"bgy": '30px'
+        "p1y": '6px',
+		"p2y": '6px',
+		"pf": '10px',		//player name font
+		"pp": '0px',		//plauer name padding
+        "pw": '445px',      // player name textbox width
+		"p1x": '200px',		// player 1 name (left)
+		"p2x": '200px',		// player 2 name (left)
+		"lbx": '280px',		// left background x
+		"rbx": '280px',     // right background x
+        "bgw": '500px',     // background width
+		"p1i": '+60px',		// player 1 init
+		"p2i": '-60px',		// player 2 init
+		"p1a": 'center',	// player 1 text align
+		"p2a": 'center',	// player 2 text align
+		"psw": '45px',
+		"psh": '37px',		// player scorecard height
+		"psy": '4px',		// player scorecard y pos (from top)
+		"psf": '30px',		// player score font size
+		"rw": '200px',		// round card background width
+		"rh": '45px',		// round card background height
+		"ry": '5px',		// round card y pos (from top of card)
+		"rx": '849px',		// round card x pos (maybe get rid of this)
+		"gn": 'Street Fighter 6',
+		"sbh": '44px',		// scoreboard height
+		"bgh": '55px',		// background height
+		"bgy": '3px'		// background y post (from top of screen)
 	},
 
 	"MBTL": {
