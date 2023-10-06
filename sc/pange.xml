@@ -26,21 +26,22 @@
     <comboItem>BBCF</comboItem>
     <comboItem>GBFV</comboItem>
     <comboItem>MBTL</comboItem>
-    <comboItem>ST</comboItem>
-    <comboItem>3S</comboItem>
     <comboItem>SF6</comboItem>
     <comboItem>GGPR</comboItem>
     <comboItem>XRD</comboItem>
     <comboItem>STRIVE</comboItem>
     <comboItem>SSBU</comboItem>
     <comboItem>T7</comboItem>
+    <comboItem>SKLGRL</comboItem>
+    <comboItem>UMVC3</comboItem>
+    <comboItem>MK1</comboItem>
+    <comboItem>ST</comboItem>
+    <comboItem>3S</comboItem>
     <comboItem>VF5</comboItem>
     <comboItem>SC6</comboItem>
     <comboItem>KOFXV</comboItem>
     <comboItem>SAMSHO</comboItem>
     <comboItem>DNF</comboItem>
-    <comboItem>SKLGRL</comboItem>
-    <comboItem>UMVC3</comboItem>
   </comboBox>
  
   <button type="reset" x="225" y="90" width="52" height="23" tooltip="Reset the Scores" id="reset" reset="pScore1,pScore2">Reset</button>
