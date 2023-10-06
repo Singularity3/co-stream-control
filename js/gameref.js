@@ -624,6 +624,34 @@ var games = {
 		"bgh": '55px',		// background height
 		"bgy": '3px'		// background y post (from top of screen)
 	},
+    "MK1": {
+		"p1y": '3px',
+		"p2y": '3px',
+		"pf": '10px',		//player name font
+		"pp": '0px',		//plauer name padding
+        "pw": '535px',      // player name textbox width
+		"p1x": '200px',		// player 1 name (left)
+		"p2x": '200px',		// player 2 name (left)
+		"lbx": '210px',		// left background x
+		"rbx": '210px',		// right background x
+        "bgw": '620px',     // background width
+		"p1i": '+60px',		// player 1 init
+		"p2i": '-60px',		// player 2 init
+		"p1a": 'center',	// player 1 text align
+		"p2a": 'center',	// player 2 text align
+		"psw": '43px',
+		"psh": '35px',		// player scorecard height
+		"psy": '1px',		// player scorecard y pos (from top)
+		"psf": '30px',		// player score font size
+		"rw": '200px',		// round card background width
+		"rh": '45px',		// round card background height
+		"ry": '0px',		// round card y pos (from top of card)
+		"rx": '849px',		// round card x pos (maybe get rid of this)
+		"gn": 'Dragonball FighterZ',
+		"sbh": '40px',		// scoreboard height
+		"bgh": '46px',		// background height
+		"bgy": '0px'		// background y post (from top of screen)
+	},
 	
 };
 
