@@ -652,6 +652,35 @@ var games = {
 		"bgh": '46px',		// background height
 		"bgy": '0px'		// background y post (from top of screen)
 	},
+    
+    	"T8": {
+		"p1y": '6px',
+		"p2y": '6px',
+		"pf": '10px',		//player name font
+		"pp": '0px',		//plauer name padding
+        "pw": '445px',      // player name textbox width
+		"p1x": '200px',		// player 1 name (left)
+		"p2x": '200px',		// player 2 name (left)
+		"lbx": '190px',		// left background x
+		"rbx": '190px',     // right background x
+        "bgw": '525px',     // background width
+		"p1i": '0px',		// player 1 init
+		"p2i": '0px',		// player 2 init
+		"p1a": 'center',	// player 1 text align
+		"p2a": 'center',	// player 2 text align
+		"psw": '45px',
+		"psh": '37px',		// player scorecard height
+		"psy": '4px',		// player scorecard y pos (from top)
+		"psf": '30px',		// player score font size
+		"rw": '200px',		// round card background width
+		"rh": '45px',		// round card background height
+		"ry": '5px',		// round card y pos (from top of card)
+		"rx": '849px',		// round card x pos (maybe get rid of this)
+		"gn": 'Granblue Fantasy Versus Rising',
+		"sbh": '44px',		// scoreboard height
+		"bgh": '55px',		// background height
+		"bgy": '3px'		// background y post (from top of screen)
+	},
 	
 };
 
