@@ -674,9 +674,9 @@ var games = {
 		"psf": '30px',		// player score font size
 		"rw": '200px',		// round card background width
 		"rh": '45px',		// round card background height
-		"ry": '5px',		// round card y pos (from top of card)
+		"ry": '0px',		// round card y pos (from top of card)
 		"rx": '849px',		// round card x pos (maybe get rid of this)
-		"gn": 'Granblue Fantasy Versus Rising',
+		"gn": 'Tekken 8',
 		"sbh": '44px',		// scoreboard height
 		"bgh": '55px',		// background height
 		"bgy": '3px'		// background y post (from top of screen)
