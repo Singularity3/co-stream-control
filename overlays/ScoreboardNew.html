@@ -33,6 +33,26 @@
                 50%{background-position:100% 50%}
                 100%{background-position:0% 50%}
             }
+            @-webkit-keyframes BackgroundTransitionR {
+                0%{background-position:100% 50%}
+                50%{background-position:0% 50%}
+                100%{background-position:100% 50%}
+            }
+            @-moz-keyframes BackgroundTransitionR {
+                0%{background-position:100% 50%}
+                50%{background-position:0% 50%}
+                100%{background-position:100% 50%}
+            }
+            @-o-keyframes BackgroundTransitionR {
+                0%{background-position:100% 50%}
+                50%{background-position:0% 50%}
+                100%{background-position:100% 50%}
+            }
+            @keyframes BackgroundTransitionR {
+                0%{background-position:100% 50%}
+                50%{background-position:0% 50%}
+                100%{background-position:100% 50%}
+            }
             #scoreboardContainer {
                 width: 1920px;
                 height:100px;
@@ -63,10 +83,10 @@
                 display: inline-block;
                 background: linear-gradient(to right, #813585, #381e93, #7353e6, #9e0039, #a05411, #9e0039, #7353e6, #381e93, #813585);
                 background-size: 400% 400%;
-                -webkit-animation: BackgroundTransition 30s linear infinite;
-                -moz-animation: BackgroundTransition 30s linear infinite;
-                -o-animation: BackgroundTransition 30s linear infinite;
-                animation: BackgroundTransition 30s linear infinite;
+                -webkit-animation: BackgroundTransitionR 30s linear infinite;
+                -moz-animation: BackgroundTransitionR 30s linear infinite;
+                -o-animation: BackgroundTransitionR 30s linear infinite;
+                animation: BackgroundTransitionR 30s linear infinite;
                 right:150px;
                 top:10px;
                 opacity: 0;
